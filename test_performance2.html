@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Test">
+
+        <title>Test Page</title>
+
+        <!-- Load the stylesheet that will reference the LCP image. -->
+        <link rel="stylesheet" href="/path/to/styles.css">
+
+        <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+        <link rel="preload" fetchpriority="high" as="image" href="/path/to/hero-image.webp" type="image/webp">
+    </head>
+    <body>
+        <!-- Fix: Preload Largest Contentful Paint image -->
+        <img fetchpriority="high" src="img/wallpaper-1536w.jpg">
+    </body>
+</html>
